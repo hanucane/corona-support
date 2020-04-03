@@ -1,4 +1,6 @@
-# CoSupport
+# Corona Support
+
+This is an open source project that is intended to help individuals understand the benefits of the CARES Act and provide resources to apply for small business loans through the CARES Act and other coronavirus legislation options.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
