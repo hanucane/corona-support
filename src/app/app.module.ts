@@ -25,7 +25,8 @@ import { SbaLoanWorkflowComponent } from './sba-loan-workflow/sba-loan-workflow.
     AppComponent,
     CaresActComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    SbaLoanWorkflowComponent
   ]
 })
 export class AppModule { }
