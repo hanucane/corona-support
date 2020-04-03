@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -13,4 +14,14 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public sendEmail(e: Event) {
+    e.preventDefault();
+    console.log(e.target[0]);
+    emailjs.sendForm('cobizsupp@gmail.com', 'template_tStaUmvL', e.target as HTMLFormElement, 'user_D20DRjAm3VTglgEt4Fcqa')
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
 }
