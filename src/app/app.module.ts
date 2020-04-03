@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CaresActComponent } from './cares-act/cares-act.component';
+import { SbaLoanWorkflowComponent } from './sba-loan-workflow/sba-loan-workflow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     NavbarComponent,
-    CaresActComponent
+    CaresActComponent,
+    SbaLoanWorkflowComponent
   ],
   imports: [
     BrowserModule,
