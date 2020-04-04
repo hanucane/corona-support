@@ -10,13 +10,15 @@ import { FormControl } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   constructor() { }
-
+  private emailServiceId = 'cobizsupp@gmail.com';
+  private emailTemplateId = 'template_tStaUmvL';
+  private emailUserId = 'user_D20DRjAm3VTglgEt4Fcqa';
   ngOnInit(): void {
   }
 
   public sendEmail(e: Event) {
     e.preventDefault();
-    emailjs.sendForm('cobizsupp@gmail.com', 'template_tStaUmvL', e.target as HTMLFormElement, 'user_D20DRjAm3VTglgEt4Fcqa')
+    emailjs.sendForm(this.emailServiceId, this.emailTemplateId, e.target as HTMLFormElement, this.emailUserId)
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
       }, (error) => {
