@@ -40,9 +40,12 @@
                     <label for="message">Message</label>
                     <textarea class="form-control" name="message" rows="5" maxlength="500" required></textarea>
                   </div>
-            
                   <button type="submit" class="btn btn-success">Submit</button>
-            
+
+                  <div class="alert alert-success" role="alert" ng-if="(submit)">
+                    Email succesful!
+                  </div>
+
                 </form>
             </div>
         </div>

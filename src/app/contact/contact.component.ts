@@ -5,7 +5,7 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
 
@@ -16,7 +16,6 @@ export class ContactComponent implements OnInit {
 
   public sendEmail(e: Event) {
     e.preventDefault();
-    console.log(e.target[0]);
     emailjs.sendForm('cobizsupp@gmail.com', 'template_tStaUmvL', e.target as HTMLFormElement, 'user_D20DRjAm3VTglgEt4Fcqa')
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
