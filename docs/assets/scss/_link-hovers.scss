@@ -1,0 +1,65 @@
+/*
+Link hover styles
+*/
+.hover-me1{
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+    color:#fff;
+    text-transform:uppercase;
+    font-weight:600;
+    &:before,&:after{
+        position: absolute;
+        width: 45px;
+        height: 2px;
+        background: #fff;
+        content: '';
+        opacity: 0.2;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        pointer-events: none;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    &:after {
+        right: 0;
+        bottom: 0;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: 100% 0;
+        -moz-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+    }
+    &:hover,&:focus{
+        outline: none;
+        color:#fff;
+        &:before{
+            left: 50%;
+            -webkit-transform: rotate(0deg) translateX(-50%);
+            -moz-transform: rotate(0deg) translateX(-50%);
+            transform: rotate(0deg) translateX(-50%);
+        }
+        &:after {
+            right: 50%;
+            -webkit-transform: rotate(0deg) translateX(50%);
+            -moz-transform: rotate(0deg) translateX(50%);
+            transform: rotate(0deg) translateX(50%);
+        }
+    }
+    &:hover:before,&:focus:before,&:hover:after,&:focus:after{
+            opacity: 1;
+    }
+}
+

@@ -1,0 +1,26 @@
+/********Template hero styles***/
+.fullscreen{
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+.mouse-down{
+    position: absolute!important;
+    left:0;
+    width:100%;
+    bottom:0;
+    text-align: center;
+    z-index:1;
+}
+.hero-big-text{
+    font-family: $base-font;
+    font-weight: 600;
+}
+@media(min-width:768px){
+    .hero-big-text{
+        font-size: 4.5rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        text-transform:capitalize;
+    }
+}
