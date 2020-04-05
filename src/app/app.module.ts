@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CaresActComponent } from './cares-act/cares-act.component';
+import { SbaLoanWorkflowComponent } from './sba-loan-workflow/sba-loan-workflow.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     NavbarComponent,
-    CaresActComponent
+    CaresActComponent,
+    SbaLoanWorkflowComponent,
+    SitemapComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import { CaresActComponent } from './cares-act/cares-act.component';
     AppComponent,
     CaresActComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    SbaLoanWorkflowComponent,
+    SitemapComponent
   ]
 })
 export class AppModule { }

@@ -1,15 +1,35 @@
 import { Component, OnInit } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+  private emailServiceId = 'cobizsupp@gmail.com';
+  private emailTemplateId = 'template_tStaUmvL';
+  private emailUserId = 'user_D20DRjAm3VTglgEt4Fcqa';
 
   ngOnInit(): void {
+    $(document).ready(() => {
+      $('form').submit(() => {
+        alert('Your message was recieved. Thanks for getting in contact!');
+        location.reload();
+      });
+    });
   }
 
+  public sendEmail(e: Event) {
+    e.preventDefault();
+    emailjs.sendForm(this.emailServiceId, this.emailTemplateId, e.target as HTMLFormElement, this.emailUserId)
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
 }
