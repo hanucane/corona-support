@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CaresActComponent } from './cares-act/cares-act.component';
 import { SbaLoanWorkflowComponent } from './sba-loan-workflow/sba-loan-workflow.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SbaLoanWorkflowComponent } from './sba-loan-workflow/sba-loan-workflow.
     ContactComponent,
     NavbarComponent,
     CaresActComponent,
-    SbaLoanWorkflowComponent
+    SbaLoanWorkflowComponent,
+    SitemapComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { SbaLoanWorkflowComponent } from './sba-loan-workflow/sba-loan-workflow.
     CaresActComponent,
     ContactComponent,
     NavbarComponent,
-    SbaLoanWorkflowComponent
+    SbaLoanWorkflowComponent,
+    SitemapComponent
   ]
 })
 export class AppModule { }
