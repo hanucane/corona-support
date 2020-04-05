@@ -1,56 +1,50 @@
 <section id="contact" class="pt90 pb50">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 pb40">
-                <div class="section-title title-left mb30">
-                    <span class="section-subTitle">Feel free to contact us</span>
-                    <h3 class="mb0">
-                        Contact Info
-                    </h3>
-                </div>
-                <ul class="list-unstyled contact-info">
-                    <li>
-                        <i class="fa fa-envelope"></i>
-                        <a href="#">cobizsupp@gmail.com</a>
-                    </li>            
-                </ul>
-                <p>
-                    This is an open source project intended to help individuals and small business owners strained by the coronavirus pandemic. 
-                    If you have questions, suggestions for content, or would like to get involved, fill out the contact form or 
-                    send an e-mail directly to learn more on how you can help. We want to continue expanding this site and adding more information to help
-                    in these challenging times. It is the time for us to come together and help each other through this crisis. 
-                </p>
-                <h3>Don't hesitate! Reach out today!</h3>
-            </div>
-            <div class="col-md-6">
-                <div class="section-title title-left mb30">
-                    <span class="section-subTitle">Drop us a line</span>
-                    <h3 class="mb0">
-                        Contact Form
-                    </h3>
-                </div>
-                <form class="contact-form" (submit)="sendEmail($event)">
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" name="name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="text" class="form-control" name="email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" name="message" rows="5" maxlength="500" required></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-success">Submit</button>
-
-                  <div class="alert alert-success" role="alert" ng-if="(submit)">
-                    Email succesful!
-                  </div>
-
-                </form>
-            </div>
+      <div class="row">
+        <div class="col-md-6 pb40">
+          <div class="section-title title-left mb30">
+            <span class="section-subTitle">Feel free to contact us</span>
+            <h3 class="mb0">
+              Contact Info
+            </h3>
+          </div>
+          <ul class="list-unstyled contact-info">
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="#">cobizsupp@gmail.com</a>
+            </li>
+          </ul>
+          <p>
+            This is an open source project intended to help individuals and small business owners strained by the coronavirus pandemic.
+            If you have questions, suggestions for content, or would like to get involved, fill out the contact form or
+            send an e-mail directly to learn more on how you can help. We want to continue expanding this site and adding more information to help
+            in these challenging times. It is the time for us to come together and help each other through this crisis.
+          </p>
+          <h3>Don't hesitate! Reach out today!</h3>
         </div>
-    </div>
-    
+        <div class="col-md-6">
+          <div class="section-title title-left mb30">
+            <span class="section-subTitle">Drop us a line</span>
+            <h3 class="mb0">
+              Contact Form
+            </h3>
+          </div>
+          <form class="contact-form" (submit)="sendEmail($event)">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="text" class="form-control" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" name="message" rows="5" maxlength="500" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" onclick="return emailSent();">Submit</button>
+        </form>
+      </div>
+        </div>
+    </div>    
 </section>
