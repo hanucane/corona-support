@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { FormControl } from '@angular/forms';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-contact',
@@ -9,12 +9,18 @@ import { FormControl } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
   private emailServiceId = 'cobizsupp@gmail.com';
   private emailTemplateId = 'template_tStaUmvL';
   private emailUserId = 'user_D20DRjAm3VTglgEt4Fcqa';
 
   ngOnInit(): void {
+    $(document).ready(() => {
+      $('form').submit(() => {
+        alert('Your message was recieved. Thanks for getting in contact!');
+        location.reload();
+      });
+    });
   }
 
   public sendEmail(e: Event) {
