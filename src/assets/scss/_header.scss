@@ -65,7 +65,7 @@
                 }
             }
             .navbar-nav .nav-link{
-                color: #111;
+                color: $primary-color;
                 &.active,&:hover,&:focus{
                     color: $primary-color;
                 }
@@ -74,7 +74,7 @@
     }
 }
 .navbar .navbar-nav .nav-link{
-    color: #111;
+    color: $primary-color;
 }
 @media(max-width:991px){
     .navbar.navbar-light.navbar-transparent{
