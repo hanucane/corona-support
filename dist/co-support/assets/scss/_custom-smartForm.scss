@@ -1,0 +1,31 @@
+/*
+Smart forms custom style
+*/
+.smart-wrap{
+    padding:0px;
+}
+.smart-container{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.smart-forms .form-body{
+    padding:0px;
+    padding-bottom: 20px;
+}
+.smart-forms .form-footer{
+    background-image: none;
+    background-color: transparent;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+.smart-forms .form-footer .button.btn-primary{
+    background-color: $primary-color;
+}
+.smart-forms .form-footer .button{
+    border-radius: 5px;
+}
+.smart-forms label, .smart-forms input, .smart-forms button, .smart-forms select, .smart-forms textarea{
+    font-family: $base-font;
+}
