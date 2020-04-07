@@ -29,7 +29,7 @@
                     Contact Form
                     </h3>
                 </div>
-                <form class="contact-form" (submit)="sendEmail($event)">
+                <form #contactForm class="contact-form" (submit)="sendEmail($event, contactForm)">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" required>
